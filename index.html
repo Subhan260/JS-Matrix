@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="head1">MATRIX</h1>
+    <p class="para1">Your Input</p>
+    
+        <div class="data1">
+        <table >
+            <tr>
+                <td id="t1"></td>
+				<td id="t2"></td>
+				<td id="t3"></td>
+			</tr>
+			<tr>
+                <td id="t4"></td>
+				<td id="t5"></td>
+				<td id="t6"></td>
+			</tr>
+			<tr>
+                <td id="t7"></td>
+				<td id="t8"></td>
+				<td id="t9"></td>
+			</tr>
+		</div>
+		
+		</table>
+		</div>
+		<br>
+		<br>
+		<br>
+        
+		<div class="data1">
+        <table>
+			<tr>
+                <td id="t10"></td>
+				<td id="t11"></td>
+				<td id="t12"></td>
+			</tr>
+			<tr>
+                <td id="t13"></td>
+				<td id="t14"></td>
+				<td id="t15"></td>
+			</tr>
+			<tr>
+                <td id="t16"></td>
+				<td id="t17"></td>
+				<td id="t18"></td>
+			</tr>
+		</table>
+	</div>
+	<br>
+    <br>
+
+
+    <p class="para2">Your Answer</p>
+    <div class="data1">
+        <table >
+            <tr>
+                <td id="t19"></td>
+                <td id="t20"></td>
+                <td id="t21"></td>
+            </tr>
+            <tr>
+                <td id="t22"></td>
+                <td id="t23"></td>
+                <td id="t24"></td>
+            </tr>
+            <tr>
+                <td id="t25"></td>
+                <td id="t26"></td>
+                <td id="t27"></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+	<br>
+	<br>
+
+    <button onclick="start()" style="margin-left: 47%;background-color: black;color: aliceblue;border-radius: 10px; padding-top:10px;padding-bottom: 10px; padding-left: 20px;padding-right: 20px;">START</button><br><br>
+    
+	<script>
+	function start() {
+			let matrix_inputS_array = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+			let result_table = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+			for (let i = 0; i < 3; i++) {
+				for (let j = 0; j < 3; j++) {
+					matrix_inputS_array[i][j] = Number(prompt(`Enter a number for Row ${i+1} Column ${j+1} in 1st Array`));
+				}
+			}
+			let matrix_inputS_array2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+			for (let i = 0; i < 3; i++) {
+				for (let j = 0; j < 3; j++) {
+					matrix_inputS_array2[i][j] = Number(prompt(`Enter a number for Row ${i+1} Column ${j+1} in 2nd Array`));
+					result_table[i][j] = matrix_inputS_array[i][j] + matrix_inputS_array2[i][j];
+				}
+			}
+
+			document.querySelector("#td1").innerHTML = matrix_inputS_array[0][0];
+			document.querySelector("#td2").innerHTML = matrix_inputS_array[0][1];
+			document.querySelector("#td3").innerHTML = matrix_inputS_array[0][2];
+			document.querySelector("#td4").innerHTML = matrix_inputS_array[1][0];
+			document.querySelector("#td5").innerHTML = matrix_inputS_array[1][1];
+			document.querySelector("#td6").innerHTML = matrix_inputS_array[1][2];
+			document.querySelector("#td7").innerHTML = matrix_inputS_array[2][0];
+			document.querySelector("#td8").innerHTML = matrix_inputS_array[2][1];
+			document.querySelector("#td9").innerHTML = matrix_inputS_array[2][2];
+
+			document.querySelector("#td10").innerHTML = matrix_inputS_array2[0][0];
+			document.querySelector("#td11").innerHTML = matrix_inputS_array2[0][1];
+			document.querySelector("#td12").innerHTML = matrix_inputS_array2[0][2];
+			document.querySelector("#td13").innerHTML = matrix_inputS_array2[1][0];
+			document.querySelector("#td14").innerHTML = matrix_inputS_array2[1][1];
+			document.querySelector("#td15").innerHTML = matrix_inputS_array2[1][2];
+			document.querySelector("#td16").innerHTML = matrix_inputS_array2[2][0];
+			document.querySelector("#td17").innerHTML = matrix_inputS_array2[2][1];
+			document.querySelector("#td18").innerHTML = matrix_inputS_array2[2][2];
+
+			document.querySelector("#td19").innerHTML = result_table[0][0];
+			document.querySelector("#td20").innerHTML = result_table[0][1];
+			document.querySelector("#td21").innerHTML = result_table[0][2];
+			document.querySelector("#td22").innerHTML = result_table[1][0];
+			document.querySelector("#td23").innerHTML = result_table[1][1];
+			document.querySelector("#td24").innerHTML = result_table[1][2];
+			document.querySelector("#td25").innerHTML = result_table[2][0];
+			document.querySelector("#td26").innerHTML = result_table[2][1];
+			document.querySelector("#td27").innerHTML = result_table[2][2];
+		}
+	</script>
+</body>
+</html>
